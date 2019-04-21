@@ -2,70 +2,40 @@
 <html>
 
 <head>
+  <title>Zhong Wen 3.0</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/onsenui.min .css">
-  <link rel="stylesheet" href="css/onsen-css-components.min.css">
-  <script src="lib/onsenui.min.js"></script>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/onsenui.min.css">
+  <link rel="stylesheet" href="./css/onsen-css-components.min.css">
+  <link rel="stylesheet" href="./css/onsenui-core.min.css">
+  <link rel="stylesheet" href="./css/onsenui-fonts.css">
+  <script src="./lib/jquery.min.js"></script>
+  <script src="./lib/onsenui.min.js"></script>
+  <!--Main App Scripts come here-->
+  <script src="./js/main.js" charset="utf-8"></script>
 
 </head>
-
 <body>
 
-  <ons-navigator id="navigator">
-    <ons-page>
-      <div style="text-align: center; margin-top: 200px">
-        <p>
-          <ons-input id="username" placeholder="名字" modifier="underbar"></ons-input>
-        </p>
 
-        <p>
-          <ons-input id="password" placeholder="Password" type="password" modifier="underbar">
-          </ons-input>
-        </p>
-
-        <p>
-          <ons-button onclick="login()">好</ons-button>
-        </p>
+  <ons-page id="helloworld-page">
+    <ons-toolbar>
+      <div class="left">
+        <ons-toolbar-button icon="md-play"></ons-toolbar-button>
       </div>
 
-    </ons-page>
-  </ons-navigator>
+      <div class="center">中文 3.0</div>
 
-  <template id="home.html">
-    <ons-page id="home">
-      <ons-toolbar id="home-toolbar">
-        <div class="center">家</div>
-        <div class="left">
-          <ons-toolbar-button onclick="openMenu()">
-            <ons-icon icon="ion-navicon, material:md-menu">
-            </ons-icon>
-          </ons-toolbar-button>
-        </div>
-      </ons-toolbar>
-      Hello!
-    </ons-page>
-  </template>
+      <div class="right">
+        <ons-toolbar-button>-</ons-toolbar-button>
+        <ons-toolbar-button>+</ons-toolbar-button>
+      </div>
+    </ons-toolbar>
 
-  <script>
-    const login = () => {
-      const username = document.querySelector('#username').value;
-      const password = document.querySelector('#password').value;
-
-      if (username === 'user' && password === 'pass') {
-
-        // call the navigator to move to the new page
-        const navigator = document.querySelector('#navigator');
-        navigator.resetToPage('home.html');
-
-      } else {
-        ons.notification.alert('名字不对');
-      }
-    }
-  </script>
-
+    <p style="text-align: center">除了古典音乐以外，我还喜欢听流行音乐。上个星期六，我和朋友去图书馆写了作业。 我很喜欢看电影，特别是喜剧电影。爸爸经常去健身房跑步，因为跑步很健康。我最喜欢的运动是滑冰，我经常去滑冰场滑冰。昨天唱完民歌以后，我画了半个小时油画。</p>
+  </ons-page>
 
 
 
 </body>
-
 </html>
