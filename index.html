@@ -2,13 +2,70 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/onsenui.min .css">
+  <link rel="stylesheet" href="css/onsen-css-components.min.css">
+  <script src="lib/onsenui.min.js"></script>
+
 </head>
 
 <body>
-  <ons-button onclick="alert('Hello World!')">No</ons-button>
+
+  <ons-navigator id="navigator">
+    <ons-page>
+      <div style="text-align: center; margin-top: 200px">
+        <p>
+          <ons-input id="username" placeholder="名字" modifier="underbar"></ons-input>
+        </p>
+
+        <p>
+          <ons-input id="password" placeholder="Password" type="password" modifier="underbar">
+          </ons-input>
+        </p>
+
+        <p>
+          <ons-button onclick="login()">好</ons-button>
+        </p>
+      </div>
+
+    </ons-page>
+  </ons-navigator>
+
+  <template id="home.html">
+    <ons-page id="home">
+      <ons-toolbar id="home-toolbar">
+        <div class="center">家</div>
+        <div class="left">
+          <ons-toolbar-button onclick="openMenu()">
+            <ons-icon icon="ion-navicon, material:md-menu">
+            </ons-icon>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+      Hello!
+    </ons-page>
+  </template>
+
+  <script>
+    const login = () => {
+      const username = document.querySelector('#username').value;
+      const password = document.querySelector('#password').value;
+
+      if (username === 'user' && password === 'pass') {
+
+        // call the navigator to move to the new page
+        const navigator = document.querySelector('#navigator');
+        navigator.resetToPage('home.html');
+
+      } else {
+        ons.notification.alert('名字不对');
+      }
+    }
+  </script>
+
+
+
+
 </body>
 
 </html>
