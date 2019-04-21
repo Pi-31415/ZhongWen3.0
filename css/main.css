@@ -7,10 +7,11 @@
 }
 @font-face {
     font-family: 'sentytea';
-    src: url('../fonts/stfangsong/stfangso-webfont.woff2') format('woff2'),
-         url('../fonts/stfangsong/stfangso-webfont.woff') format('woff');
+    src: url('../fonts/sentytea/sentytea-webfont.woff2') format('woff2'),
+         url('../fonts/sentytea/sentytea-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
 }
 
 @font-face {
@@ -37,4 +38,8 @@ body{
 
 .chinese{
   font-family: stfangsongregular;
+}
+
+.chinesetea{
+  font-family: sentytea;
 }

@@ -13,29 +13,56 @@
   <script src="./lib/onsenui.min.js"></script>
   <!--Main App Scripts come here-->
   <script src="./js/main.js" charset="utf-8"></script>
-
+  <script src="./js/chinese.js" charset="utf-8"></script>
 </head>
+
 <body>
 
 
   <ons-page id="helloworld-page">
     <ons-toolbar>
       <div class="left">
-        <ons-toolbar-button icon="md-play"></ons-toolbar-button>
+        <ons-toolbar-button>
+          <ons-icon icon="ion-navicon, material:md-menu" onclick="togglemenu();"></ons-icon>
+        </ons-toolbar-button>
       </div>
 
       <div class="center">中文 3.0</div>
 
       <div class="right">
-        <ons-toolbar-button>-</ons-toolbar-button>
-        <ons-toolbar-button>+</ons-toolbar-button>
+        <ons-toolbar-button icon="md-play"></ons-toolbar-button>
       </div>
     </ons-toolbar>
 
-    <p style="text-align: center">除了古典音乐以外，我还喜欢听流行音乐。上个星期六，我和朋友去图书馆写了作业。 我很喜欢看电影，特别是喜剧电影。爸爸经常去健身房跑步，因为跑步很健康。我最喜欢的运动是滑冰，我经常去滑冰场滑冰。昨天唱完民歌以后，我画了半个小时油画。</p>
+
+    <ons-splitter>
+      <!-- The side menu -->
+      <ons-splitter-side id="menu" collapse width="220px">
+        <ons-page>
+          <ons-list id="pokemon-list">
+              <ons-list-item>bulbasaur</ons-list-item>
+              <ons-list-item>charmander</ons-list-item>
+              <ons-list-item>squirtle</ons-list-item>
+              <ons-list-item>pikachu</ons-list-item>
+              <ons-list-item>trubbish</ons-list-item>
+            </ons-list>
+        </ons-page>
+      </ons-splitter-side>
+
+      <!-- Everything not in the side menu -->
+      <ons-splitter-content>
+        <ons-navigator id="navigator" page="sample.html"></ons-navigator>
+
+        hello
+
+      </ons-splitter-content>
+    </ons-splitter>
+
+
   </ons-page>
 
 
 
 </body>
+
 </html>
