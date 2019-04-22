@@ -36,11 +36,13 @@ body{
 
 a{
   text-decoration: none;
-  color: #1b8bcb;
+  color: #00838f;
 }
 
 /*This is the responsive resizing of the card components*/
-
+.fabescape{
+  height:0px;
+}
 .card{
   width:50%;
   margin-left:auto;
@@ -54,20 +56,27 @@ a{
   .homebtn{
     width:100%;
   }
+  .fabescape{
+    height:90px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .card{
     width:95%;
   }
+
 }
 
 /*Modifying the App theme*/
 .toolbar,.button--material{
-  background-color: #1b8bcb;
+  background-color: #00838f;
   color: #fff;
 }
-
+.notification--material{
+  background-color: #4fb3bf;
+  font-size: 14px;
+}
 .toolbar-button--material{
   color: #fff;
 }
@@ -78,4 +87,9 @@ a{
 
 .homebtn{
   width:70%;
+}
+
+.homebtn:hover{
+  width:70%;
+  background-color: #4fb3bf;
 }

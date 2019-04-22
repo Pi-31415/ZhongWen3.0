@@ -42,6 +42,7 @@
     <!--Main App Scripts come here-->
     <script src="./js/main.js" charset="utf-8"></script>
     <script src="./js/chinese.js" charset="utf-8"></script>
+    <script src="./js/tutorial.js" charset="utf-8"></script>
   </head>
 
 <body onload="switchpage('home');">
@@ -103,14 +104,13 @@
     <ons-page id="home">
       <ons-card>
         <center>
-          <h3>Zhong Wen (中文) 3.0</h3>
-          <img src="icon.png" width="60px"></img>
+          <h3>中文 (Zhong Wen) - 3.0</h3>
+          <p id="icon" style="text-shadow: none; font-size: 40px; color: rgb(255, 255, 255); height: 80px; width: 80px; line-height: 80px; border-radius: 50%; text-align: center; background-color: rgb(0, 131, 143);padding:0px;margin:0px;"> 文 </p>
           <p>by Pi</p>
-          <br>
-          <ons-button modifier="large" class="homebtn">Tutorial - <ons-icon size="15px" icon="video"></ons-icon>
+          <ons-button modifier="large" class="homebtn" id="flashcard">Flashcards - <ons-icon size="15px" icon="images"></ons-icon>
           </ons-button>
           <br><br>
-          <ons-button modifier="large" class="homebtn">Write Characters - <ons-icon size="15px" icon="md-brush"></ons-icon>
+          <ons-button modifier="large" class="homebtn">Write Characters - <ons-icon size="20px" icon="md-brush"></ons-icon>
           </ons-button>
           <br><br>
           <ons-button modifier="large" class="homebtn">Browse Characters - <ons-icon size="15px" icon="book-open"></ons-icon>
@@ -119,15 +119,16 @@
           <ons-button modifier="large" class="homebtn">Dictation Mode - <ons-icon size="15px" icon="edit"></ons-icon>
           </ons-button>
           <br><br>
-          <ons-button modifier="large" class="homebtn">Sentences / Notes - <ons-icon size="15px" icon="language"></ons-icon>
+          <ons-button modifier="large" class="homebtn">Sentences / Notes - <ons-icon size="20px" icon="language"></ons-icon>
           </ons-button>
           <br><br>
           <ons-button modifier="large" class="homebtn">Shadowing Practice - <ons-icon size="15px" icon="headphones"></ons-icon>
           </ons-button>
           <br><br>
-          <ons-button modifier="large" class="homebtn" onclick="switchpage('colophon')">About - <ons-icon size="15px" icon="address-card"></ons-icon>
+          <ons-button modifier="large" class="homebtn" onclick="switchpage('colophon')">About - <ons-icon size="15px" icon="info-circle"></ons-icon>
           </ons-button>
           <br><br>
+          <p><i>First time here? Then, try out the <a onclick="showPopover(flashcard)">tutorial</a>.</i></p>
         </center>
       </ons-card>
 
@@ -135,7 +136,14 @@
   </template>
 
 
-
+  <!--This part is for the tutorial. Tutorial Popovers-->
+  <ons-popover direction="up" id="popover" cancelable>
+  <div style="padding: 10px; text-align: center;">
+    <p>
+      Hi, welcome to 中文 3.0. To get started, tap on the "Flashcards - <ons-icon size="15px" icon="images"></ons-icon>" button below.
+    </p>
+  </div>
+</ons-popover>
 
   <!-- The following are the sub pages - do not forget to edit their page names in the  sidemenu above -->
 
@@ -332,7 +340,12 @@
   <!--Colophon as in Jon's site, please do not edit anymore-->
   <template id="colophon.html">
     <ons-page id="colophon">
+      <ons-fab position="top left" ripple onclick="switchpage('home')">
+        <ons-icon icon="md-arrow-back"></ons-icon>
+      </ons-fab>
+      <div class="fabescape"></div>
       <ons-card>
+
         <div class="title">
           Colophon
         </div>
@@ -341,8 +354,8 @@
           <p>The content of 中文 3.0 is based on the International Baccalaureate Diploma Program - Mandarin Ab Initio Syllabus taught at Li Po Chun United World College of Hong Kong.</p>
           <br>
           <center>
-            <h3>Zhong Wen (中文)</h3>
-            <img src="icon.png" width="100px"></img>
+            <h3>中文 (Zhong Wen)</h3>
+            <p id="icon" style="text-shadow: none; font-size: 55px; color: rgb(255, 255, 255); height: 100px; width: 100px; line-height: 100px; border-radius: 50%; text-align: center; background-color: rgb(0, 131, 143);padding:0px;margin:0px;"> 文 </p>
             <p>Version 3.0</p>
           </center>
           <br>
