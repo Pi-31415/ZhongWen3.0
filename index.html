@@ -11,12 +11,19 @@
   <link rel="stylesheet" href="./css/onsenui-fonts.css">
   <script src="./lib/jquery.min.js"></script>
   <script src="./lib/onsenui.min.js"></script>
+
+  <!--Additional Libraries are loaded here-->
+  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+  <script type="text/javascript" src="lib/p5.min.js"></script>
+  <script type="text/javascript" src="lib/p5.play.js"></script>
+
   <!--Main App Scripts come here-->
   <script src="./js/main.js" charset="utf-8"></script>
   <script src="./js/chinese.js" charset="utf-8"></script>
-</head>``
 
-<body>
+</head>
+
+<body onload="switchpage('home')">
   <!--This script is required to set Materail Design as Default-->
   <script>
     ons.platform.select('android');
@@ -29,65 +36,65 @@
           <ons-icon icon="ion-navicon, material:md-menu" onclick="togglemenu();"></ons-icon>
         </ons-toolbar-button>
       </div>
-
       <div class="center">中文 3.0</div>
-
       <div class="right">
-        <ons-toolbar-button icon="md-search"></ons-toolbar-button>
+        <ons-toolbar-button icon="md-search" onclick="speakchin('我的爸爸长得很帅')"></ons-toolbar-button>
       </div>
     </ons-toolbar>
 
-
+    <!-- Warning: Do not edit the splitter code apart from list items -->
     <ons-splitter>
       <!-- The side menu -->
       <ons-splitter-side id="menu" collapse width="220px" swipeable>
         <ons-page>
           <!-- Menu here -->
           <ons-list>
-            <ons-list-item onclick="switchpage('home')">
-              Home
+
+            <!-- Warning: Do not edit the parent splitter code apart from list items -->
+            <ons-list-item onclick="switchpage('page1')">
+              Page1
             </ons-list-item>
-            <ons-list-item onclick="switchpage('body')">
-              Body
+            <ons-list-item onclick="switchpage('page2')">
+              Page2
             </ons-list-item>
-            <ons-list-item onclick="switchpage('test')">
-              Test
+            <ons-list-item onclick="switchpage('page3')">
+              Page3
             </ons-list-item>
+
           </ons-list>
         </ons-page>
       </ons-splitter-side>
-
       <!-- Everything not in the side menu -->
       <ons-splitter-content>
-
         <ons-navigator id="navigator">
-
-
         </ons-navigator>
-
       </ons-splitter-content>
     </ons-splitter>
-
-
   </ons-page>
 
 
-
+  <!--From here to below are additional pages which appears on split view-->
   <template id="home.html">
     <ons-page id="home">
       Home
     </ons-page>
   </template>
 
-  <template id="body.html">
-    <ons-page id="body">
-      Body
+  <template id="page1.html">
+    <ons-page id="page1">
+      Page1
     </ons-page>
   </template>
 
-  <template id="test.html">
-    <ons-page id="test">
-      Test
+  <template id="page2.html">
+    <ons-page id="page2">
+      Page2
+    </ons-page>
+  </template>
+
+  <template id="page3.html">
+    <ons-page id="page3">
+      Page3
     </ons-page>
   </template>
 
