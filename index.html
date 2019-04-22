@@ -101,19 +101,40 @@
   <!-- Home page template -->
   <template id="home.html">
     <ons-page id="home">
-
+      <br>
       <ons-card>
         <center>
           <h1>Zhong Wen (中文) 3.0</h1>
           <img src="icon.png" width="100px"></img>
+
           <p>by Pi</p>
+
+          <br>
+          <ons-button modifier="large" class="homebtn">Tutorial - <ons-icon size="15px" icon="video"></ons-icon>
+          </ons-button>
+          <br><br>
+          <ons-button modifier="large" class="homebtn">Write Characters - <ons-icon size="15px" icon="md-brush"></ons-icon>
+          </ons-button>
+          <br><br>
+          <ons-button modifier="large" class="homebtn">Browse Characters - <ons-icon size="15px" icon="book-open"></ons-icon>
+          </ons-button>
+          <br><br>
+          <ons-button modifier="large" class="homebtn">Dictation Mode - <ons-icon size="15px" icon="headphones"></ons-icon>
+          </ons-button>
+          <br><br>
+          <ons-button modifier="large" class="homebtn">Sentence Structure / Notes - <ons-icon size="15px" icon="language"></ons-icon>
+          </ons-button>
+          <br><br>
+          <ons-button modifier="large" class="homebtn" onclick="switchpage('colophon')">About - <ons-icon size="15px" icon="address-card"></ons-icon>
+          </ons-button>
+          <br><br>
         </center>
       </ons-card>
 
     </ons-page>
   </template>
 
-  
+
 
 
   <!-- The following are the sub pages - do not forget to edit their page names in the  sidemenu above -->
@@ -407,6 +428,14 @@
             </div>
             <div class="center">
               <span class="list-item__title">Material Design Icons</span><span class="list-item__subtitle"><a href="https://material.io/tools/icons/?style=baseline">https://material.io/tools/icons/</a></span>
+            </div>
+          </ons-list-item>
+          <ons-list-item>
+            <div class="left">
+              <img class="list-item__thumbnail" src="https://www.drupal.org/files/project-images/font_awesome_logo.png">
+            </div>
+            <div class="center">
+              <span class="list-item__title">Font Awesome</span><span class="list-item__subtitle"><a href="https://fontawesome.com/icons">https://fontawesome.com/icons</a></span>
             </div>
           </ons-list-item>
           <br><br>

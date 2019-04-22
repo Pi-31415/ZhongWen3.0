@@ -51,6 +51,9 @@ a{
   .card{
     width:90%;
   }
+  .homebtn{
+    width:100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -71,4 +74,8 @@ a{
 
 .toolbar__title{
   color: #fff;
+}
+
+.homebtn{
+  width:70%;
 }

@@ -4,13 +4,8 @@ function falsifyp5() {
   is_p5_on = false;
 }
 
-
 //Set all styling to material
 ons.platform.select('android');
-
-
-
-//Settings as local variables
 
 //Menu open Function
 function togglemenu() {
