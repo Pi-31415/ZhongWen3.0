@@ -36,10 +36,8 @@
     <script src="./lib/onsenui.min.js"></script>
 
 
-    <!--Additional Libraries are loaded here-->
+    <!--Additional Libraries are loaded here. P5 is for the write only.-->
     <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
-    <script type="text/javascript" src="lib/p5.min.js"></script>
-    <script type="text/javascript" src="lib/p5.play.js"></script>
 
     <!--Main App Scripts come here-->
     <script src="./js/main.js" charset="utf-8"></script>
@@ -75,8 +73,8 @@
 
             <!-- Warning: Do not edit the parent splitter code apart from list items -->
             <!-- Warning: remember to change the name of the page files -->
-            <ons-list-item onclick="switchpage('write')">
-              Write
+            <ons-list-item>
+              <a href="write.html" style="color:#000;">Write</a>
             </ons-list-item>
             <ons-list-item onclick="switchpage('components')">
               Components
@@ -103,43 +101,20 @@
   <!-- Home page template -->
   <template id="home.html">
     <ons-page id="home">
+
       <ons-card>
-
+        <center>
+          <h1>Zhong Wen (中文) 3.0</h1>
+          <img src="icon.png" width="100px"></img>
+          <p>by Pi</p>
+        </center>
       </ons-card>
-
 
     </ons-page>
   </template>
 
-  <!--This write page is implemented with p5.js and fully working, don't edit this section and sketch.js-->
-  <!--Note: clear function basically refresh the page, should store the word ID in localstorage first-->
-  <template id="write.html">
-    <ons-page id="write">
-      <script src="./js/sketch.js" charset="utf-8"></script>
-      <ons-card>
-        <div class="title">
-          Hanzi Writing
-        </div>
-        <div class="content">
-          <p>The writing area is under the content as usual. Flipping card is to be coded in sandbox first. Still needs to write code to store the current word in local storage because clear function refresh the page.</p>
-          <p>Currently, there is an issue of extra pixels on the writing area, figure out a way to subtract it.</p>
-          <div>
-            <ons-button>
-              <ons-icon icon="ion-checkmark"></ons-icon>
-            </ons-button>
-          </div>
+  
 
-        </div>
-      </ons-card>
-      <ons-fab position="bottom right" ripple>
-        <ons-icon icon="md-delete" onclick="clearscreen()"></ons-icon>
-      </ons-fab>
-      <ons-fab position="bottom left">
-        <ons-icon icon="md-volume-up" onclick="speakchin('我的爸爸长得很帅')"></ons-icon>
-      </ons-fab>
-      <div id='p5canvas'></div>
-    </ons-page>
-  </template>
 
   <!-- The following are the sub pages - do not forget to edit their page names in the  sidemenu above -->
 
