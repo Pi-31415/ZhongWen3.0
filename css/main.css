@@ -5,14 +5,6 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'sentytea';
-    src: url('../fonts/sentytea/sentytea-webfont.woff2') format('woff2'),
-         url('../fonts/sentytea/sentytea-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 @font-face {
   font-family: 'Roboto';
@@ -37,9 +29,7 @@ body{
 }
 
 .chinese{
-  font-family: stfangsongregular;
-}
-
-.chinesesentytea{
-  font-family: sentytea;
+  font-family: 'stfangsongregular';
+  font-weight: normal;
+  font-style: normal;
 }

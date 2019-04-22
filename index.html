@@ -14,7 +14,7 @@
   <!--Main App Scripts come here-->
   <script src="./js/main.js" charset="utf-8"></script>
   <script src="./js/chinese.js" charset="utf-8"></script>
-</head>
+</head>``
 
 <body>
   <!--This script is required to set Materail Design as Default-->
@@ -40,18 +40,18 @@
 
     <ons-splitter>
       <!-- The side menu -->
-      <ons-splitter-side id="menu" collapse width="220px">
+      <ons-splitter-side id="menu" collapse width="220px" swipeable>
         <ons-page>
           <!-- Menu here -->
           <ons-list>
-            <ons-list-item>
-              中文
+            <ons-list-item onclick="switchpage('home')">
+              Home
             </ons-list-item>
-            <ons-list-item>
-              白坤
+            <ons-list-item onclick="switchpage('body')">
+              Body
             </ons-list-item>
-            <ons-list-item>
-              Sandbox
+            <ons-list-item onclick="switchpage('test')">
+              Test
             </ons-list-item>
           </ons-list>
         </ons-page>
@@ -60,19 +60,10 @@
       <!-- Everything not in the side menu -->
       <ons-splitter-content>
 
-        <ons-card>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Baozi_Chengdu.JPG/2560px-Baozi_Chengdu.JPG" alt="Onsen UI" style="width: 100%">
-          <div class="title">
-            中文 3.0
-          </div>
-          <div class="content">
-
-            <div style="font-family:sentytea,serif">
-              包子，一般是用面粉混和水后发酵过的面团内加馅蒸制而成，款式非常多。常用馅为各种肉类或各类蔬菜、芝麻、豆沙等等。现今出名的天津狗不理包子、广东叉烧包，小笼包，灌汤包。汉朝时，由于磨已广泛应用，蒸制的面食也随之流行于全中国各地，但当时统称为“饼”、“馒”、“曼头”[1][2]、“蒸饼”[3]“笼饼”[4]、“馒头”[5]、“蛮头”，皆无馅。唐代以后，馒头变小，称“玉柱”、“灌浆”[6]、“馒役”[7]、“瞒头”[8]、“粳头”[9]，亦为无馅。此后，无论是有无馅心，均统称馒头。一直到北宋赵祯出生后，才出现包子这一称呼，指的就是有馅的馒头[10]。而馒头一词本身则逐渐变成无馅制品的统称。现在苏南地区，仍将无论是否含有内馅的馒头统称为馒头，例如肉为馅的称为“肉馒头”。
-            </div>
+        <ons-navigator id="navigator">
 
 
-        </ons-card>
+        </ons-navigator>
 
       </ons-splitter-content>
     </ons-splitter>
@@ -81,6 +72,24 @@
   </ons-page>
 
 
+
+  <template id="home.html">
+    <ons-page id="home">
+      Home
+    </ons-page>
+  </template>
+
+  <template id="body.html">
+    <ons-page id="body">
+      Body
+    </ons-page>
+  </template>
+
+  <template id="test.html">
+    <ons-page id="test">
+      Test
+    </ons-page>
+  </template>
 
 </body>
 
