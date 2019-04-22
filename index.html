@@ -20,7 +20,6 @@
   <!--Main App Scripts come here-->
   <script src="./js/main.js" charset="utf-8"></script>
   <script src="./js/chinese.js" charset="utf-8"></script>
-
 </head>
 
 <body onload="switchpage('home')">
@@ -45,14 +44,14 @@
     <!-- Warning: Do not edit the splitter code apart from list items -->
     <ons-splitter>
       <!-- The side menu -->
-      <ons-splitter-side id="menu" collapse width="220px" swipeable>
+      <ons-splitter-side id="menu" collapse width="220px">
         <ons-page>
           <!-- Menu here -->
           <ons-list>
 
             <!-- Warning: Do not edit the parent splitter code apart from list items -->
-            <ons-list-item onclick="switchpage('page1')">
-              Page1
+            <ons-list-item onclick="switchpage('write')">
+              Write
             </ons-list-item>
             <ons-list-item onclick="switchpage('page2')">
               Page2
@@ -77,12 +76,15 @@
   <template id="home.html">
     <ons-page id="home">
       Home
+
     </ons-page>
   </template>
 
-  <template id="page1.html">
-    <ons-page id="page1">
-      Page1
+  <template id="write.html">
+    <ons-page id="write">
+      <div id='p5canvas'></div>
+
+  <script src="./js/sketch.js" charset="utf-8"></script>
     </ons-page>
   </template>
 

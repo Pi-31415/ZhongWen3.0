@@ -25,11 +25,3 @@ function speakeng(k) {
         rate: speed
     });
 }
-
-function speakchin(k) {
-    speaker = "Chinese Female";
-    speed = 1.00;
-    responsiveVoice.speak(k, speaker, {
-        rate: speed
-    });
-}
