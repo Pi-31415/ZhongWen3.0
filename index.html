@@ -27,9 +27,11 @@
   <link rel="stylesheet" href="./css/onsen-css-components.min.css">
   <link rel="stylesheet" href="./css/onsenui-core.min.css">
   <link rel="stylesheet" href="./css/onsenui-fonts.css">
+  <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/main.css">
   <script src="./lib/jquery.min.js"></script>
   <script src="./lib/onsenui.min.js"></script>
-  <link rel="stylesheet" href="./css/main.css">
+
 
   <!--Additional Libraries are loaded here-->
   <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
@@ -171,28 +173,35 @@
 
       <ons-card>
         <div class="title">
-          Sentence Structure with Tooltip
+          Sentence Structure with Tooltip/Input
         </div>
         <div class="content">
 
           <script>
-          var showPopover = function(target) {
-            document
-              .getElementById('popover')
-              .show(target);
-          };
+            var showPopover = function(target) {
+              document
+                .getElementById('popover')
+                .show(target);
+            };
 
-          var hidePopover = function() {
-            document
-              .getElementById('popover')
-              .hide();
-          };
+            var hidePopover = function() {
+              document
+                .getElementById('popover')
+                .hide();
+            };
           </script>
 
           <p>Using Heading 3 looks nice.</p>
           <h3>我是<span style="color:green;" onclick="showPopover(this);">白坤</span>。</h3>
           <h3>她昨天弹吉他弹了三个小时。<span class="notification">Time Duration</span></h3>
-          <h3>我在香港。我喜欢弹吉他。</h3>
+          <h3>我在
+            <select class="select-input select-input--material">
+              <option>香港</option>
+              <option>北京</option>
+              <option>上海</option>
+            </select>
+            。我喜欢弹吉他。
+          </h3>
         </div>
       </ons-card>
 
@@ -200,7 +209,7 @@
       <ons-popover direction="right" id="popover">
         <div style="padding: 10px; text-align: center;">
           <p>
-              名字
+            名字
           </p>
           <p>
             <ons-button onclick="hidePopover()">Okay</ons-button>
@@ -282,10 +291,23 @@
             </div>
           </div>
 
-        </div>
-      </ons-card>
+          <p>Material Segment</p>
+          <div class="segment segment--material" style="width: 280px; margin: 0 auto;">
+            <div class="segment__item segment--material__item">
+              <input type="radio" class="segment__input segment--material__input" name="segment-b" checked>
+              <div class="segment__button segment--material__button">One</div>
+            </div>
+            <div class="segment__item segment--material__item">
+              <input type="radio" class="segment__input segment--material__input" name="segment-b">
+              <div class="segment__button segment--material__button">Two</div>
+            </div>
+            <div class="segment__item segment--material__item">
+              <input type="radio" class="segment__input segment--material__input" name="segment-b">
+              <div class="segment__button segment--material__button">Three</div>
+            </div>
 
-      <br><br>
+          </div>
+      </ons-card>
 
       <ons-fab position="bottom right" ripple>
         <ons-icon icon="md-plus"></ons-icon>

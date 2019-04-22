@@ -57,3 +57,17 @@ a{
     width:95%;
   }
 }
+
+/*Modifying the App theme*/
+.toolbar{
+  background-color: #1b8bcb;
+  color: #fff;
+}
+
+.toolbar-button--material{
+  color: #fff;
+}
+
+.toolbar__title{
+  color: #fff;
+}
