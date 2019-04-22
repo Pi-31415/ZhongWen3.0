@@ -30,7 +30,7 @@
       <div class="center">中文 3.0</div>
 
       <div class="right">
-        <ons-toolbar-button icon="md-play"></ons-toolbar-button>
+        <ons-toolbar-button icon="md-search"></ons-toolbar-button>
       </div>
     </ons-toolbar>
 
@@ -39,21 +39,26 @@
       <!-- The side menu -->
       <ons-splitter-side id="menu" collapse width="220px">
         <ons-page>
-          <ons-list id="pokemon-list">
-              <ons-list-item>bulbasaur</ons-list-item>
-              <ons-list-item>charmander</ons-list-item>
-              <ons-list-item>squirtle</ons-list-item>
-              <ons-list-item>pikachu</ons-list-item>
-              <ons-list-item>trubbish</ons-list-item>
-            </ons-list>
+          <!-- Menu here -->
+          <ons-list>
+            <ons-list-item>
+              <ons-button icon="md-translate"> 中文</ons-button>
+            </ons-list-item>
+            <ons-list-item>
+              <ons-button icon="md-code"> Pi</ons-button>
+            </ons-list-item>
+            <ons-list-item>
+              <ons-button icon="md-code"> Sandbox</ons-button>
+            </ons-list-item>
+          </ons-list>
         </ons-page>
       </ons-splitter-side>
 
       <!-- Everything not in the side menu -->
       <ons-splitter-content>
-        <ons-navigator id="navigator" page="sample.html"></ons-navigator>
 
-        hello
+
+
 
       </ons-splitter-content>
     </ons-splitter>
