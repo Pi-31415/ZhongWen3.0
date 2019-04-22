@@ -1,3 +1,3 @@
 const togglemenu = () => {
-    document.querySelector('#menu').open();
-  };
+  document.querySelector('#menu').open();
+};
