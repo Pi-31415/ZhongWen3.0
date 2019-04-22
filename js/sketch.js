@@ -1,4 +1,5 @@
-let sketch = function(p) {
+
+var sketch = function(p) {
   p.setup = function() {
     var wid = p.displayWidth;
     var hid = p.displayHeight;
@@ -20,3 +21,13 @@ let sketch = function(p) {
 };
 
 new p5(sketch, 'p5canvas');
+
+
+//Clear function, basically reloads the page
+function clearscreen() {
+
+    //Needs some way to store current mandarin word ID
+
+    switchpage('write');
+
+}

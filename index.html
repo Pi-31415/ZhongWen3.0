@@ -22,7 +22,7 @@
   <script src="./js/chinese.js" charset="utf-8"></script>
 </head>
 
-<body onload="switchpage('home')">
+<body onload="switchpage('home');">
   <!--This script is required to set Materail Design as Default-->
   <script>
     ons.platform.select('android');
@@ -37,7 +37,7 @@
       </div>
       <div class="center">中文 3.0</div>
       <div class="right">
-        <ons-toolbar-button icon="md-search" onclick="speakchin('我的爸爸长得很帅')"></ons-toolbar-button>
+        <ons-toolbar-button icon="md-search"></ons-toolbar-button>
       </div>
     </ons-toolbar>
 
@@ -50,14 +50,15 @@
           <ons-list>
 
             <!-- Warning: Do not edit the parent splitter code apart from list items -->
+            <!-- Warning: remember to change the name of the page files -->
             <ons-list-item onclick="switchpage('write')">
               Write
             </ons-list-item>
-            <ons-list-item onclick="switchpage('page2')">
-              Page2
+            <ons-list-item onclick="switchpage('sandbox')">
+              Sandbox
             </ons-list-item>
-            <ons-list-item onclick="switchpage('page3')">
-              Page3
+            <ons-list-item onclick="switchpage('components')">
+              Components
             </ons-list-item>
 
           </ons-list>
@@ -73,32 +74,125 @@
 
 
   <!--From here to below are additional pages which appears on split view-->
+  <!-- Home page template -->
   <template id="home.html">
     <ons-page id="home">
-      Home
+
+      <ons-card>
+        <div class="title">
+          Home
+        </div>
+        <div class="content">
+          <p>This is the template for the home page</p>
+        </div>
+      </ons-card>
 
     </ons-page>
   </template>
 
+  <!--This write page is implemented with p5.js and fully working, don't edit this section and sketch.js-->
+  <!--Note: clear function basically refresh the page, should store the word ID in localstorage first-->
   <template id="write.html">
     <ons-page id="write">
+      <script src="./js/sketch.js" charset="utf-8"></script>
+      <ons-card>
+        <div class="title">
+          Writing
+        </div>
+        <div class="content">
+          <p>The writing area is under the content as usual. Flipping card is to be coded in sandbox first. Still needs to write code to store the current word in local storage because clear function refresh the page.</p>
+
+          <div>
+            <ons-button>
+              <ons-icon icon="ion-checkmark"></ons-icon>
+            </ons-button>
+          </div>
+
+        </div>
+      </ons-card>
+      <ons-fab position="bottom right" ripple>
+        <ons-icon icon="md-delete" onclick="clearscreen()"></ons-icon>
+      </ons-fab>
+      <ons-fab position="bottom left">
+        <ons-icon icon="md-volume-up" onclick="speakchin('我的爸爸长得很帅')"></ons-icon>
+      </ons-fab>
       <div id='p5canvas'></div>
-
-  <script src="./js/sketch.js" charset="utf-8"></script>
     </ons-page>
   </template>
 
-  <template id="page2.html">
-    <ons-page id="page2">
-      Page2
+  <!-- The following are the sub pages - do not forget to edit their page names in the  sidemenu above -->
+
+  <template id="sandbox.html">
+    <ons-page id="sandbox">
+
+      <ons-card>
+        <div class="title">
+          Sandbox Area
+        </div>
+        <div class="content">
+          <p>The Sandbox area is for testing and development. It contains the sections of the testing code which does not run alongside or affect the main app. For the javascript file, edit the sandbox.js</p>
+        </div>
+      </ons-card>
+
+
+
     </ons-page>
   </template>
 
-  <template id="page3.html">
-    <ons-page id="page3">
-      Page3
+  <template id="components.html">
+    <ons-page id="components">
+
+      <ons-card>
+        <div class="title">
+          Simple Card
+        </div>
+        <div class="content">
+          <p>This is a simple card</p>
+        </div>
+      </ons-card>
+
+
+      <ons-card>
+        <div class="title">
+          Animating Stroke Order
+        </div>
+        <div class="content">
+          <div id="hanzisteps"></div>
+          <p>Make sure that a div with id "hanzisteps" is created. Default font size is 100. It can be modified.</p>
+          <ons-button onclick="animatestep('我是中学生')">Animate Stroke Order</ons-button>
+        </div>
+      </ons-card>
+
+
+      <ons-card>
+        <div class="title">
+          Buttons
+        </div>
+        <div class="content">
+          <p>A button with a face</p>
+
+          <ons-button>
+            <ons-icon icon="md-face"></ons-icon>
+            Button
+          </ons-button>
+
+        </div>
+      </ons-card>
+
+
+
+
+      <ons-fab position="bottom right" ripple>
+        <ons-icon icon="md-plus"></ons-icon>
+      </ons-fab>
+
+      <ons-fab position="bottom left" modifier="mini">
+        <ons-icon icon="md-face"></ons-icon>
+      </ons-fab>
+
     </ons-page>
   </template>
+
 
 </body>
 
