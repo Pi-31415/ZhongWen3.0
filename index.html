@@ -23,13 +23,13 @@
   <meta name="theme-color" content="#ffffff">
 
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/onsenui.min.css">
   <link rel="stylesheet" href="./css/onsen-css-components.min.css">
   <link rel="stylesheet" href="./css/onsenui-core.min.css">
   <link rel="stylesheet" href="./css/onsenui-fonts.css">
   <script src="./lib/jquery.min.js"></script>
   <script src="./lib/onsenui.min.js"></script>
+  <link rel="stylesheet" href="./css/main.css">
 
   <!--Additional Libraries are loaded here-->
   <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
@@ -107,7 +107,7 @@
           <p>This is the template for the home page</p>
         </div>
       </ons-card>
-
+      <br>
     </ons-page>
   </template>
 
@@ -153,6 +153,7 @@
           <p>The Sandbox area is for testing and development. It contains the sections of the testing code which does not run alongside or affect the main app. For the javascript file, edit the sandbox.js</p>
         </div>
       </ons-card>
+      <br>
     </ons-page>
   </template>
 
@@ -164,10 +165,85 @@
           Simple Card
         </div>
         <div class="content">
-          <p>This is a simple card</p>
+          <p>This is a simple card.</p>
         </div>
       </ons-card>
 
+      <ons-card>
+        <div class="title">
+          Sentence Structure with Tooltip
+        </div>
+        <div class="content">
+
+          <script>
+          var showPopover = function(target) {
+            document
+              .getElementById('popover')
+              .show(target);
+          };
+
+          var hidePopover = function() {
+            document
+              .getElementById('popover')
+              .hide();
+          };
+          </script>
+
+          <p>Using Heading 3 looks nice.</p>
+          <h3>我是<span style="color:green;" onclick="showPopover(this);">白坤</span>。</h3>
+          <h3>她昨天弹吉他弹了三个小时。<span class="notification">Time Duration</span></h3>
+          <h3>我在香港。我喜欢弹吉他。</h3>
+        </div>
+      </ons-card>
+
+      <!--The popover for the above card is here-->
+      <ons-popover direction="right" id="popover">
+        <div style="padding: 10px; text-align: center;">
+          <p>
+              名字
+          </p>
+          <p>
+            <ons-button onclick="hidePopover()">Okay</ons-button>
+          </p>
+        </div>
+      </ons-popover>
+
+
+      <ons-card>
+        <div class="title">
+          Card With Image
+        </div>
+        <img src="https://cdn.thegentlemansjournal.com/wp-content/uploads/2017/10/greatwall-900x600-c-center.jpg" alt="Onsen UI" style="width: 70%">
+        <div class="content">
+          <p>The Great Wall of China</p>
+        </div>
+      </ons-card>
+
+      <ons-card>
+        <div class="title">
+          Card with Image/Hanzi and Button Bar
+        </div>
+        <img src="http://www.chinaholidays.co.uk/blog/wp-content/uploads/2013/11/Yellow-Mt-1024x683.jpg" alt="Onsen UI" style="width: 300px">
+        <div class="content">
+          <div id="hanzisteps"><img src="https://dictionary.writtenchinese.com/giffile.action?&amp;localfile=true&amp;fileName=山.gif" height="100px"><img
+              src="https://dictionary.writtenchinese.com/giffile.action?&amp;localfile=true&amp;fileName=歌.gif" height="100px"></div>
+
+          <p>The Great Wall of China</p>
+
+          <div class="button-bar" style="width:280px;">
+            <div class="button-bar__item">
+              <button class="button-bar__button">Good</button>
+            </div>
+            <div class="button-bar__item">
+              <button class="button-bar__button">Okay</button>
+            </div>
+            <div class="button-bar__item">
+              <button class="button-bar__button">Bad</button>
+            </div>
+          </div>
+
+        </div>
+      </ons-card>
 
       <ons-card>
         <div class="title">
@@ -179,7 +255,6 @@
           <ons-button onclick="animatestep('我是中学生')">Animate Stroke Order</ons-button>
         </div>
       </ons-card>
-
 
       <ons-card>
         <div class="title">
@@ -193,8 +268,25 @@
             Button
           </ons-button>
 
+          <p>Button Bar - ANKI Style</p>
+
+          <div class="button-bar" style="width:280px;">
+            <div class="button-bar__item">
+              <button class="button-bar__button">Good</button>
+            </div>
+            <div class="button-bar__item">
+              <button class="button-bar__button">Okay</button>
+            </div>
+            <div class="button-bar__item">
+              <button class="button-bar__button">Bad</button>
+            </div>
+          </div>
+
         </div>
       </ons-card>
+
+      <br><br>
+
       <ons-fab position="bottom right" ripple>
         <ons-icon icon="md-plus"></ons-icon>
       </ons-fab>
@@ -207,7 +299,7 @@
   </template>
 
 
-  <!--Colophon as in Jon's site-->
+  <!--Colophon as in Jon's site, please do not edit anymore-->
   <template id="colophon.html">
     <ons-page id="colophon">
       <ons-card>
@@ -233,7 +325,6 @@
               <span class="list-item__title">Atom</span><span class="list-item__subtitle"><a href="https://atom.io/">https://atom.io/</a></span>
             </div>
           </ons-list-item>
-
           <ons-list-header>This repository lives on Github as </ons-list-header>
           <ons-list-item>
             <div class="left">
@@ -254,7 +345,6 @@
               <span class="list-item__title">Onsen UI</span><span class="list-item__subtitle"><a href="https://onsen.io/">https://onsen.io/</a></span>
             </div>
           </ons-list-item>
-
           <ons-list-header>Graphics and Interaction</ons-list-header>
           <ons-list-item>
             <div class="left">
@@ -264,7 +354,6 @@
               <span class="list-item__title">p5js</span><span class="list-item__subtitle"><a href="https://p5js.org/">https://p5js.org/</a></span>
             </div>
           </ons-list-item>
-
           <ons-list-header>Text-To-Speech API</ons-list-header>
           <ons-list-item>
             <div class="left">
@@ -283,7 +372,6 @@
               <span class="list-item__title">MediaWiki API</span><span class="list-item__subtitle"><a href="https://www.mediawiki.org/wiki/API:Images">https://www.mediawiki.org/wiki/API:Images</a></span>
             </div>
           </ons-list-item>
-
           <br><br>
           <p>Animated Stroke Orders of Chinese Characters are the property of </p>
           <ons-list-item>
@@ -294,7 +382,6 @@
               <span class="list-item__title">Written Chinese</span><span class="list-item__subtitle"><a href="https://dictionary.writtenchinese.com/">https://dictionary.writtenchinese.com/</a></span>
             </div>
           </ons-list-item>
-
           <br><br>
           <p>The icons used are the open source icons from</p>
           <ons-list-item>
@@ -313,11 +400,10 @@
               <span class="list-item__title">Material Design Icons</span><span class="list-item__subtitle"><a href="https://material.io/tools/icons/?style=baseline">https://material.io/tools/icons/</a></span>
             </div>
           </ons-list-item>
-
           <br><br>
-
         </div>
       </ons-card>
+      <br>
     </ons-page>
   </template>
 

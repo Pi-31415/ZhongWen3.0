@@ -37,3 +37,23 @@ body{
 a{
   text-decoration: none;
 }
+
+/*This is the responsive resizing of the card components*/
+
+.card{
+  width:50%;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .card{
+    width:90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card{
+    width:95%;
+  }
+}
