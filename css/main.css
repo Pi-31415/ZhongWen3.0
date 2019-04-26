@@ -93,3 +93,11 @@ a{
   width:70%;
   background-color: #4fb3bf;
 }
+
+.hanzi-container {
+    float: left;
+}
+
+.hanzi-container-large {
+    clear: left;
+}

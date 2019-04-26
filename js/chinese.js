@@ -17,6 +17,37 @@ function hanzidisplaysteps(item,index) {
     demoP.innerHTML += fullurl;
 }
 
+
+//Displaysteps using hanziwriter library
+function generatechar() {
+    var charid = 0;
+    var charid2 = 0;
+    var charactersize = 50;
+    var x = document.getElementsByClassName("hanzi-container-large");
+    var idname = x[0].id;
+    for (i = 0; i < x.length; i++) {
+        var hanzi = x[i].id;
+        var character = hanzi.split("");
+        for (j = 0; j < character.length; j++) {
+            var hanzidiv = "<div class=\"hanzi-container\" id=\"" + character[j] + charid + "\"></div>";
+            var parent = document.getElementById(hanzi);
+            parent.innerHTML += hanzidiv;
+            charid++;
+        }
+        for (k = 0; k < character.length; k++) {
+            var writer = HanziWriter.create(character[k] + charid2, character[k], {
+                width: charactersize,
+                height: charactersize,
+                padding: 5,
+                delayBetweenStrokes: 5,
+                delayBetweenLoops: 500
+            });
+            writer.loopCharacterAnimation();
+            charid2++;
+        }
+    }
+}
+
 //Hanzi animated display
 //The output is linked to a div with id called 'anihanzi'
 function animatestep(word) {

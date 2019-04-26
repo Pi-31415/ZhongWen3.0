@@ -38,8 +38,11 @@
 
     <!--Additional Libraries are loaded here. P5 is for the write only.-->
     <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@1.3/dist/hanzi-writer.min.js"></script>
 
     <!--Main App Scripts come here-->
+
     <script src="./js/main.js" charset="utf-8"></script>
     <script src="./js/chinese.js" charset="utf-8"></script>
     <script src="./js/tutorial.js" charset="utf-8"></script>
@@ -80,7 +83,7 @@
             <ons-list-item onclick="switchpage('components')">
               Components
             </ons-list-item>
-            <ons-list-item onclick="switchpage('sandbox')">
+            <ons-list-item onclick="switchpage('sandbox');">
               Sandbox
             </ons-list-item>
             <ons-list-item onclick="switchpage('colophon')">
@@ -141,12 +144,12 @@
 
   <!--This part is for the tutorial. Tutorial Popovers-->
   <ons-popover direction="up" id="popover" cancelable>
-  <div style="padding: 10px; text-align: center;">
-    <p>
-      Hi, welcome to 中文 3.0. To get started, tap on the "Flashcards - <ons-icon size="15px" icon="images"></ons-icon>" button below.
-    </p>
-  </div>
-</ons-popover>
+    <div style="padding: 10px; text-align: center;">
+      <p>
+        Hi, welcome to 中文 3.0. To get started, tap on the "Flashcards - <ons-icon size="15px" icon="images"></ons-icon>" button below.
+      </p>
+    </div>
+  </ons-popover>
 
   <!-- The following are the sub pages - do not forget to edit their page names in the  sidemenu above -->
 
@@ -159,6 +162,16 @@
         <div class="content">
           <p>The Sandbox area is for testing and development. It contains the sections of the testing code which does not run alongside or affect the main app. For the javascript file, edit the sandbox.js</p>
         </div>
+
+
+        <div class="hanzi-container-large" id="我有很多中文作业"></div>
+
+        <div class="hanzi-container-large" id="我爸爸喜欢我的妈妈"></div>
+
+        <div class="hanzi-container-large" id="爸爸长得很帅"></div>
+        <br>
+        <ons-button onclick="generatechar();">Genchar</ons-button>
+
       </ons-card>
       <br>
     </ons-page>
@@ -264,9 +277,10 @@
           Animating Stroke Order
         </div>
         <div class="content">
-          <div id="hanzisteps"></div>
-          <p>Make sure that a div with id "hanzisteps" is created. Default font size is 100. It can be modified.</p>
-          <ons-button onclick="animatestep('我是中学生')">Animate Stroke Order</ons-button>
+          <div class="hanzi-container-large"id="我是中学生"></div>
+          <div class="hanzi-container-large"id="我的家人"></div>
+          <p>Make sure that a div with class 'hanzi-container-large' is created. Default font size is 100. It can be modified.</p>
+          <ons-button onclick="generatechar()">Animate Stroke Order</ons-button>
         </div>
       </ons-card>
 
@@ -358,7 +372,8 @@
           <br>
           <center>
             <h3>中文 (Zhong Wen)</h3>
-            <p id="icon" style="text-shadow: none; font-size: 55px; color: rgb(255, 255, 255); height: 100px; width: 100px; line-height: 100px; border-radius: 50%; text-align: center; background-color: rgb(0, 131, 143);padding:0px;margin:0px;"> 文 </p>
+            <p id="icon" style="text-shadow: none; font-size: 55px; color: rgb(255, 255, 255); height: 100px; width: 100px; line-height: 100px; border-radius: 50%; text-align: center; background-color: rgb(0, 131, 143);padding:0px;margin:0px;"> 文
+            </p>
             <p>Version 3.0</p>
           </center>
           <br>
