@@ -36,7 +36,7 @@ body{
 
 a{
   text-decoration: none;
-  color: #00838f;
+  color: #2869a5;
 }
 
 /*This is the responsive resizing of the card components*/
@@ -70,7 +70,7 @@ a{
 
 /*Modifying the App theme*/
 .toolbar,.button--material{
-  background-color: #00838f;
+  background-color: #2869a5;
   color: #fff;
 }
 .notification--material{
@@ -91,7 +91,7 @@ a{
 
 .homebtn:hover{
   width:70%;
-  background-color: #4fb3bf;
+  background-color: #459c94;
 }
 
 .hanzi-container {
